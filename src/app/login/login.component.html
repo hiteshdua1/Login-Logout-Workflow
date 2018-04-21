@@ -1,3 +1,26 @@
-<p>
-  login works!
-</p>
+<div class="col-md-6 col-md-offset-3">  
+  <h2>Login</h2>
+  <form #loginForm="ngForm">
+    <!-- UserName -->  
+    <div class="form-group" [class.has-error]="isValidField(userName)">
+      <!-- For labelling the Input Field. Here for="userNameId" is used to give focus to the input field when user clicks on label -->
+      <label for="userNameId" class="control-label">User Name</label>
+      <!-- Actual field where the data is being enetered by the user -->
+      <input id="userNameId" #userName="ngModel" pattern="((?![\\/\.,^]).)*" type="text" class="form-control" required name="userName" ngModel>
+      <!-- This is a conditional field and comes up based on the validation of the above `input` element --> 
+      <div *ngIf="isValidField(userName)" class="alert alert-danger">
+          User Name is required
+      </div>
+    </div>
+
+    <!-- Password -->
+    <div class="form-group" [class.has-error]="isValidField(password)">
+      <label for="passwordId" class="control-label">Password</label>
+      <input id="passwordId" #password="ngModel" pattern="((?![\\/\.,^]).)*" type="password" class="form-control" required name="password" ngModel>
+      <div *ngIf="isValidField(password)" class="alert alert-danger">
+          Password is required
+      </div>
+    </div>
+    <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">Submit</button>
+  </form>
+</div>

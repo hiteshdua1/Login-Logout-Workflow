@@ -12,4 +12,8 @@ export class LoginComponent implements OnInit {
   ngOnInit() {
   }
 
+  public isValidField(field) {
+    return field.invalid && field.dirty;
+  }
+
 }

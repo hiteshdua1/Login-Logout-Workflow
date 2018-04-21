@@ -1,1 +1,19 @@
 /* You can add global styles to this file, and also import other style files */
+@import 'https://fonts.googleapis.com/css?family=Roboto:300,400,500';
+
+body {
+    margin : 0 auto;
+    width: 50em;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: #555;
+    font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+}
+  
+h1,
+h2,
+strong {
+  color: #333;
+}
+
+  
