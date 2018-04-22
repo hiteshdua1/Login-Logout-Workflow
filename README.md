@@ -2,13 +2,43 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
+## Project Structure 
+`
+Client
+src
++---app
+|   |   app.component.css 
+|   |   app.component.html
+|   |   app.component.spec.ts
+|   |   app.component.ts
+|   |   app.module.ts 
+|   |   app.routes.ts # Contains Angular Routing
+|   |
+|   +---login # Contains login view
+|   +---model # Contains Models
+|   +---services # Contains Http, authentication  and cookie api services
+|   +---status # Contains status of login, logout view
+|   +---user-details # Private view specific to logged in user only
+|   \---welcome # General view open to everyone
+|
++---assets # For adding resources
+|
+\---environments # For adding env specific dependencies
+
+Server
+server
+|   server.js  # Contains main base server logic
+|
++---api-fixtures # Contains Users mock data
+|
++---config # Contains application config 
+|
+\---controllers # Contains authentication controller
+`
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Build
 
