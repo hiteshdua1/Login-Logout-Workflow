@@ -29,8 +29,11 @@ function login(req,res){
 
             //Set the cookie in case of valid user
             res.cookie(config.userCookieName, JSON.stringify(user));
+            
             //Return the user data
-            res.send({ success: true , errorMessage : null , user: user });
+            setTimeout(() => {
+                res.send({ success: true , errorMessage : null , user: user });
+            }, getRandomTimeout());
 
         } else {
             // Create Error Object for invalid Credentials
@@ -39,8 +42,12 @@ function login(req,res){
         }
     
     } catch(error) {
-        console.log(error)
-        res.send(error);
+        console.log(error);
+        //Return the user data
+        setTimeout(() => {
+            res.send(error);
+        }, getRandomTimeout());
+
     }
    
 }
@@ -51,3 +58,9 @@ function logout(req,res) {
     res.clearCookie(config.userCookieName);
     res.send(true)
 }
+
+// Returns a random number between min and max
+function getRandomTimeout() {
+    return Math.random() * (3000 - 1000) + 1000;
+  }
+  

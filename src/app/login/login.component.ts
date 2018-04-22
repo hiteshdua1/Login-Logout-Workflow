@@ -14,6 +14,7 @@ import { LoginStatus } from '../constants/common.constants';
 })
 export class LoginComponent implements OnInit {
   errorMessage: string;
+  processing = false;
   constructor(private authService: AuthService, private router: Router, private statusService: StatusService) { }
 
   ngOnInit() {
@@ -25,6 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   login(form: NgForm) {
+    this.processing = true;
     this.statusService.setStatus(LoginStatus.LOGGINING_IN);
     this.authService.login(form.value).subscribe(res => {
       if (res.success) {
@@ -34,6 +36,7 @@ export class LoginComponent implements OnInit {
         this.statusService.setStatus(LoginStatus.LOGGED_OUT);
         this.errorMessage = res.errorMessage;
       }
+      this.processing = false;
     });
   }
 
