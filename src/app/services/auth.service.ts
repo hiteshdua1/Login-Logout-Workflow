@@ -14,15 +14,11 @@ export class AuthService {
         'Content-Type':  'application/json',
       })
     };
-    return this.http.post('http://localhost:3000/login', body, httpOptions);
+    return this.http.post('/login', body, httpOptions);
 }
 
   logout(): Observable<any> {
-    const httpOptions = {
-      headers: new HttpHeaders({
-        'Content-Type':  'application/json',
-      })
-    };
-    return this.http.post('http://localhost:3000/logout', null, httpOptions);
+
+    return this.http.get('/logout');
   }
 }

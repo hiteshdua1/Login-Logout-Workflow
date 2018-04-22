@@ -40,5 +40,8 @@
       </div>
     </div>
     <button class="btn btn-primary" type="submit" [disabled]="loginForm.invalid">Submit</button>
+    <div *ngIf="errorMessage" class="alert alert-danger mt-1" >
+       {{errorMessage}}
+    </div>
   </form>
 </div>

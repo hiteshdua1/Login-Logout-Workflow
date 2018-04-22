@@ -14,10 +14,12 @@ import { AuthService } from './services/auth.service';
 import { CookieService } from './services/cookie.service';
 import { UnauthenticatedRoutesGuard } from './services/unauthenticated-routes-guard.service';
 import { AuthenticatedRoutesGuard } from './services/authenticated-routes-guard.service';
+import { StatusService } from './services/status.service';
 /*
  * App Routes
  */
 import { appRoutes } from './app.routes';
+
 
 
 @NgModule({
@@ -38,7 +40,8 @@ import { appRoutes } from './app.routes';
     AuthService,
     CookieService,
     UnauthenticatedRoutesGuard,
-    AuthenticatedRoutesGuard
+    AuthenticatedRoutesGuard,
+    StatusService
   ],
   bootstrap: [AppComponent]
 })

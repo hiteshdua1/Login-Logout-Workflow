@@ -1,3 +1,7 @@
-<p>
-  user-details works!
-</p>
+<div class="userDetails p-4">
+  <h1>User Details</h1>
+  <h5 class="name">Username : {{userDetails.username}}</h5>
+  <h5 class="name">First Name : {{ userDetails.firstName }}</h5>
+  <h5 class="name">Last Name : {{ userDetails.lastName }}</h5>
+  <a (click)="logout()" class="btn btn-primary mt-2">Logout</a>
+</div>
