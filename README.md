@@ -45,7 +45,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Running Express Server
 Run `node server/server.js` to run the express server . The express server will serve the static files from 'dist' directory.
 
-## Build the Project and run App.
+## Build the Project and run app
 Run `npm start` to build the project and start express server to serve the static files. Open *http://localhost:3000* to run the app in browser.
 
 
