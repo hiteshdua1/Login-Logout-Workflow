@@ -1,12 +1,12 @@
-<div class="col-md-6 col-md-offset-3">  
+<div class="login-container p-5 m-1">  
   <h2>Login</h2>
-  <form #loginForm="ngForm" (submit)="login(loginForm)">
+  <form #loginForm="ngForm" (submit)="login(loginForm)" class="loginform">
     <!-- UserName -->  
     <div class="form-group" [class.has-error]="isValidField(userName)">
       <!-- For labelling the Input Field. Here for="userNameId" is used to give focus to the input field when user clicks on label -->
       <label for="userNameId" class="control-label">User Name</label>
       <!-- Actual field where the data is being enetered by the user -->
-      <input id="userNameId" [class.is-invalid]="isValidField(userName)" #userName="ngModel" pattern="((?![\\/\.,^]).)*" type="text" class="form-control" required name="userName" ngModel>
+      <input id="userNameId" #userName="ngModel" pattern="((?![\\/\.,^]).)*" type="text" class="form-control" required name="userName" ngModel>
       <!-- This is a conditional field and comes up based on the validation of the above `input` element --> 
       <div *ngIf="isValidField(userName)" class="alert alert-danger">
         <div *ngIf="userName.errors.required">
@@ -25,7 +25,7 @@
     <!-- Password -->
     <div class="form-group" [class.has-error]="isValidField(password)">
       <label for="passwordId" class="control-label">Password</label>
-      <input id="passwordId" [class.is-invalid]="isValidField(password)" #password="ngModel" pattern="((?![\\/\.,^]).)*" type="password" class="form-control" required name="password" ngModel>
+      <input id="passwordId" #password="ngModel" pattern="((?![\\/\.,^]).)*" type="password" class="form-control" required name="password" ngModel>
       <div *ngIf="isValidField(password)" class="alert alert-danger">
         <div *ngIf="password.errors.required">
           Password is required.

@@ -1,4 +1,7 @@
 import { Component, OnInit } from '@angular/core';
+import { UserDetails } from '../modal/user-details.modal';
+import { DataService } from './../Services/data.service';
+
 
 @Component({
   selector: 'app-user-details',
@@ -7,9 +10,13 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserDetailsComponent implements OnInit {
 
+  // userDetails: UserDetails;
+
   constructor() { }
 
   ngOnInit() {
+    // this.data.currentMessage.subscribe(message => this.userDetails = message);
   }
+
 
 }
