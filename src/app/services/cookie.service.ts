@@ -3,6 +3,7 @@ export class CookieService  {
     constructor() {}
 
     getCookie(cookieName) {
+        debugger;
         const cookies = {};
         const pairs = document.cookie.split('; ');
         for (const key in pairs) {

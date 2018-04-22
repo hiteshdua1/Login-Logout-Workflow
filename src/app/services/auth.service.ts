@@ -14,8 +14,7 @@ export class AuthService {
         'Content-Type':  'application/json',
       })
     };
-
-    return this.http.post('http://localhost:3100/login', body, httpOptions);
+    return this.http.post('http://localhost:3000/login', body, httpOptions);
 }
 
   logout(): Observable<any> {
@@ -24,6 +23,6 @@ export class AuthService {
         'Content-Type':  'application/json',
       })
     };
-    return this.http.post('http://localhost:3100/logout', null, httpOptions);
+    return this.http.post('http://localhost:3000/logout', null, httpOptions);
   }
 }

@@ -13,8 +13,10 @@ export class UnauthenticatedRoutesGuard implements CanActivate {
     canActivate(): boolean {
         const cookie = this.cookieService.getUserCookie();
         // If cookie exists, then navigate to view
+        console.log('Here');
+        debugger;
         if (cookie) {
-            this.router.navigate(['view']);
+            this.router.navigate(['user-details']);
             return false;
         }
         return true;

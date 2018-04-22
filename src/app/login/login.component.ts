@@ -22,9 +22,8 @@ export class LoginComponent implements OnInit {
 
   login(form: NgForm) {
     this.authService.login(form.value).subscribe(res => {
-
       if (res.success) {
-        this.router.navigate(['view']);
+        this.router.navigate(['user-details']);
       } else {
         alert(res.errorMessage);
       }
