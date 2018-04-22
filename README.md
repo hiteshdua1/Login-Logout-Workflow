@@ -3,8 +3,8 @@
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.7.4.
 
 ## Project Structure 
-`
 Client
+```
 src
 +---app
 |   |   app.component.css 
@@ -24,8 +24,10 @@ src
 +---assets # For adding resources
 |
 \---environments # For adding env specific dependencies
+```
 
 Server
+```
 server
 |   server.js  # Contains main base server logic
 |
@@ -34,7 +36,7 @@ server
 +---config # Contains application config 
 |
 \---controllers # Contains authentication controller
-`
+```
 
 ## Development server
 
