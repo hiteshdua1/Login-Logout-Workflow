@@ -48,5 +48,7 @@ Run `node server/server.js` to run the express server . The express server will 
 ## Build the Project and run app
 Run `npm start` to build the project and start express server to serve the static files. Open *http://localhost:3000* to run the app in browser.
 
+![Alt Text](loginLogout.gif?raw=true "Login Logout")
+
 
 
