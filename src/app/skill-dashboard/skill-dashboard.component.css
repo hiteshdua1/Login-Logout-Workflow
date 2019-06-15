@@ -1,0 +1,25 @@
+div.skill-container {
+  background: #efefef;
+  color:white;
+};
+
+.skill-container a {
+  border: 1px solid #8723FF;
+  border-radius: 25px !important;
+  background-color: #fff;
+  color: #8723FF;
+  font-size: 1.2em;
+  letter-spacing: 0.1em;
+  padding: 0.5em 1em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+.skill-container a:hover {
+  border: 1px solid #fff;
+  background:  #8723FF;
+  color: white;
+}
+
+h3 {
+  color: black;
+}

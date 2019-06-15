@@ -8,7 +8,7 @@ const bodyParser = require('body-parser');
  * Internal modules
  */
 const authController = require('./controllers/auth.controller');
-
+const skillsController = require('./controllers/skills.controller');
 /*
  * Initializing express App
  */
@@ -26,6 +26,7 @@ app.use(bodyParser.json({
  */
 app.post('/login', authController.login);
 app.get('/logout', authController.logout);
+app.get('/skills', skillsController.getSkills);
 app.use(express.static(path.resolve(__dirname, './../dist')));
 
 /*

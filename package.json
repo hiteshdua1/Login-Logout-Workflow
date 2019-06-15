@@ -4,7 +4,7 @@
   "license": "MIT",
   "scripts": {
     "ng": "ng",
-    "start" : "ng build --prod && node server/server",
+    "start": "ng build --prod && node server/server",
     "build": "ng build --prod",
     "test": "ng test",
     "lint": "ng lint",
@@ -21,9 +21,13 @@
     "@angular/platform-browser": "^5.2.0",
     "@angular/platform-browser-dynamic": "^5.2.0",
     "@angular/router": "^5.2.0",
+    "ag-grid": "^18.1.2",
+    "ag-grid-angular": "^21.0.1",
+    "ag-grid-community": "^21.0.1",
     "bootstrap": "^4.1.0",
     "core-js": "^2.4.1",
     "express": "^4.16.3",
+    "lodash": "^4.17.11",
     "rxjs": "^5.5.6",
     "zone.js": "^0.8.19"
   },

@@ -1,0 +1,16 @@
+<div class="container pl-0 pr-0">
+  <h1>
+    Skills
+  </h1>
+  <p>These are the list of top skills in the organization according to varioud matrix. Click on any skill to check out it's leaderboard</p>
+  <ng-container *ngIf="skillGroups">
+    <div class="p-3 skill-container" *ngFor="let groupName of objectKeys(skillGroups)">
+      <h3>{{groupName}}</h3>
+      <span class="pt-3" *ngFor="let skill of skillGroups[groupName]">
+            <a routerLink="/leaderboard" class="btn">{{skill.name}}</a>
+      </span>
+    </div>
+  </ng-container>
+
+</div>
+

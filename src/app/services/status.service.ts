@@ -12,7 +12,6 @@ export class StatusService  {
     constructor() {}
 
     setStatus(status: LoginStatus) {
-        debugger;
         this.messageSource.next(status);
     }
 
